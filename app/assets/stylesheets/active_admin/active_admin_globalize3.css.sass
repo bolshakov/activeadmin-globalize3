@@ -23,7 +23,8 @@
           padding-bottom: 8px + 4px
           margin-bottom: 0
 
-          &.active
+        &.active
+          a
             background: #f4f4f4
             +inset-shadow(0, 4px, 4px, #ddd)
             +border-top-radius(4px)
@@ -33,6 +34,9 @@
 
     &> fieldset.inputs
       margin-bottom: 0
+
+      &:not(.active)
+        display: none
 
       ol
         padding-left: 0

@@ -8,7 +8,7 @@ module ActiveAdmin
           template.content_tag(:ul, class: "available-locales") do
             I18n.available_locales.sort.map do |locale|
               template.content_tag(:li) do
-                template.content_tag(:a, I18n.t(:"active_admin.globalize3.language.#{locale}"), href:".locale-#{locale}")
+                template.content_tag(:a, I18n.t(:"active_admin.globalize3.language.#{locale}"), href: "#locale-#{locale}", :"data-locale" => locale)
               end
             end.join.html_safe
           end <<
