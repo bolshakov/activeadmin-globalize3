@@ -1,8 +1,6 @@
 $(document).on "active_admin_globalize3:select_tab", ".activeadmin-translations > ul > li", ->
-  console.log 'triggering AA GLobalize'
   newTab = $(@)
   newLocale = $("a", newTab).data("locale")
-  console.log "fieldset.locale-#{newLocale}"
   newFieldsets = $("fieldset.locale-#{newLocale}")
 
   prevTab = newTab.siblings('.active')
