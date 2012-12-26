@@ -15,5 +15,7 @@ $(document).on "click", ".activeadmin-translations > ul > li", ->
   $(@).trigger "active_admin_globalize3:select_tab"
 
 $ ->
-  $(".activeadmin-translations > ul > li:first").trigger "active_admin_globalize3:select_tab"
+
+  $(".activeadmin-translations").each (idx, translation)->
+    $(translation).find('ul.available-locales > li:first').trigger "active_admin_globalize3:select_tab"
 
