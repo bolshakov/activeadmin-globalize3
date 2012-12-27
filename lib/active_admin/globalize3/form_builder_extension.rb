@@ -4,7 +4,7 @@ module ActiveAdmin
       extend ActiveSupport::Concern
 
       def translated_inputs(name = "Translations", &block)
-        available_locales = rray(I18n.default_locale).+(I18n.available_locales.sort).uniq
+        available_locales = Array(I18n.default_locale).+(I18n.available_locales.sort).uniq
         form_buffers.last << template.content_tag(:div, class: "activeadmin-translations") do
           template.content_tag(:ul, class: "available-locales") do
             available_locales.map do |locale|
